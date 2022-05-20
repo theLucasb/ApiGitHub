@@ -2,6 +2,7 @@
   <v-app>
     <v-card>
       <v-navigation-drawer
+        class="nav"
         v-model="drawer"
         :mini-variant.sync="mini"
         permanent
@@ -12,7 +13,7 @@
             <v-img src="./assets/ydnZ3AGH_400x400.jpg"></v-img>
           </v-list-item-avatar>
 
-          <v-list-item-title>Vuetisolinf</v-list-item-title>
+          <v-list-item-title>GitSolinf</v-list-item-title>
 
           <v-btn icon @click.stop="mini = !mini">
             <v-icon>mdi-chevron-left</v-icon>
@@ -23,7 +24,7 @@
 
         <v-list dense>
           <v-list-item
-            v-for="item in items"
+            v-for="item in item"
             :key="item.title"
             link
             :to="item.path"
@@ -50,16 +51,18 @@ export default {
   data() {
     return {
       drawer: true,
-      items: [
-        { title: "Home", icon: "mdi-home-city", path: "/" },
-        { title: "João Cobol", icon: "mdi-account", path: "/Joao" },
-        { title: "Rodrigo José", icon: "mdi-account", path: "/Rodrigo" },
-        { title: "Lucas Rodrigo", icon: "mdi-account", path: "/Lucas" },
-        { title: "Weslley Costa", icon: "mdi-account", path: "/Weslley" },
-        { title: "Luana Miki", icon: "mdi-account", path: "/Luana" },
+      item: [
+        { title: "Home", icon: "mdi-home", path: "/" },
+        { title: "Lucas Rodrigo", icon: "mdi-github", path: "/Lucas" },
+        { title: "", icon: "", path: "/" },
+        { title: "", icon: "", path: "/" },
+        { title: "", icon: "", path: "/" },
+        { title: "", icon: "", path: "/" },
       ],
       mini: true,
     };
   },
 };
 </script>
+
+

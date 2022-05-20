@@ -4,25 +4,30 @@
       <div class="inicio">
         <h1>
           Digite o usuário do GitHub
+
           <img
             class="gitImage"
-            src="https://pngimg.com/uploads/github/github_PNG58.png"
-            alt=""
+            src="https://img.icons8.com/fluency-systems-filled/48/ffffff/github.png"
           />
         </h1>
       </div>
       <v-form class="conteudo" @submit.prevent="">
         <v-row cols="col-6 align-content-start">
-          <v-col class="col-6 col-row-6 align-content-start" cols="">
+          <v-col
+            class="col-6 col-row-6 align-content-start"
+            color="#56cde8"
+            cols=""
+          >
+            <label>Usuário do GitHub</label>
             <v-text-field
-              class="input"
+              flex
+              class="text-input-blue"
+              color="#56cde8"
               ref="groupId"
-              color="black"
               v-model="name"
               :name="name"
               :counter="30"
               :rules="nameRules"
-              label="Usuário GitHub"
               required
             ></v-text-field>
           </v-col>
@@ -65,7 +70,12 @@
         <a
           v-if="href"
           id="hrefGit"
-          class="mr-4 v-btn v-btn--is-elevated v-btn--has-bg theme--light v-size--default"
+          class="
+            mr-4
+            v-btn v-btn--is-elevated v-btn--has-bg
+            theme--light
+            v-size--default
+          "
           color="error"
           :href="href"
         >
@@ -85,7 +95,6 @@ export default {
   data() {
     return {
       user: {},
-      //imagem: {backgroundImage: "url(https://sempreupdate.com.br/wp-content/webp-express/webp-images/uploads/2021/05/GitHub-headpic.jpg.webp)"},
     };
   },
   created() {
@@ -117,20 +126,20 @@ export default {
           var recive = 0;
         });
 
-      //alert(field);
       this.id = this.$refs.groupId.value;
       console.log(this.id);
-      //alert("lucas");
     },
   },
 };
 </script>
 <style>
 .user {
-  background-color: darkslategray;
+  background-color: #0d1117;
+  color: #56cde8;
   height: auto;
   width: auto;
 }
+
 .inicio {
   text-align: center;
   margin-bottom: 30px;
@@ -199,17 +208,17 @@ export default {
   position: relative;
 }
 
-.input {
+.text-input-blue .v-text-field__slot input {
+  color: #56cde8 !important;
   padding: 20px;
   text-align: center;
-  color: white;
-  background-color: darkslategrey;
+  background-color: #0d1117;
   border-radius: 5px;
 }
+
 #button {
   background-color: #0d1117;
   color: #53a5f7;
-  border: white;
   margin-top: 20px;
   margin-left: 600px;
 }
